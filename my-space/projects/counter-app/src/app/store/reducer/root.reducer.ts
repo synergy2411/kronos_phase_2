@@ -1,4 +1,4 @@
-import { Action } from "@ngrx/store";
+import { Action} from "@ngrx/store";
 import * as rootActions from '../actions/root.actions';
 
 const initialState = {

@@ -15,5 +15,8 @@
 - @ngrx/store-devtools
 
 - npm install @ngrx/store@10 --save
+- npm install @ngrx/store-devtools -D
 
 https://ukg.zoom.us/j/99811054935?pwd=TzNIZXg1YzBmT2hNTVdDczlZTWhDQT09
+
+- npm install http-server -g

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import * as rootActions from './store/actions/root.actions';
 
 @Component({
   selector: 'app-root',
@@ -15,5 +16,22 @@ export class AppComponent implements OnInit {
     this.store.subscribe((data : any) => {
       this.counter = data['ctr'].counter
     })
+  }
+
+  onIncrease(){
+    this.store.dispatch({type : rootActions.INCREMENT})
+  }
+
+  onDecrease(){
+    this.store.dispatch({type : rootActions.DECREMENT})
+  }
+
+  onAddCounter(value : number){
+    // this.store.dispatch({type : rootActions.ADD_COUNTER, value})
+    this.store.dispatch(new rootActions.onAddCounter(value))
+  }
+
+  onSubtractCounter(value : number){
+    this.store.dispatch(new rootActions.onSubtractCounter(value))
   }
 }

@@ -4,3 +4,15 @@
 <button (click) = "onDecrease()">Decrease</button>
 <button (click) = "onAddCounter(10)">Add Counter</button>
 <button (click) = "onSubtractCounter(5)">Subtract Counter</button>
+
+<hr>
+
+<button (click)="onStoreResult()">Store Result</button>
+
+<br>
+
+<ul>
+  <li *ngFor="let res of result">
+    {{res}}
+  </li>
+</ul>

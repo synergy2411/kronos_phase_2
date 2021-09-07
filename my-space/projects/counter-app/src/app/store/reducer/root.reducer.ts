@@ -2,7 +2,8 @@ import { Action } from "@ngrx/store";
 import * as rootActions from '../actions/root.actions';
 
 const initialState = {
-  counter : 0
+  counter : 0,
+  result : []
 }
 
 function rootReducer(
@@ -11,22 +12,32 @@ function rootReducer(
   switch (action.type) {
     case rootActions.INCREMENT: {
       return {
+        ...state,
         counter : state.counter + 1
       }
     }
     case rootActions.DECREMENT:{
       return {
+        ...state,
         counter : state.counter - 1
       }
     }
     case rootActions.ADD_COUNTER: {
       return {
+        ...state,
         counter : state.counter + action.value
       }
     }
     case rootActions.SUBTRACT_COUNTER: {
       return {
+        ...state,
         counter : state.counter - action.value
+      }
+    }
+    case rootActions.STORE_RESULT : {
+      return {
+        ...state,     // {counter : 0, result : []}
+        result : [...state.result, state.counter]
       }
     }
     default:

@@ -10,11 +10,14 @@ import * as rootActions from './store/actions/root.actions';
 export class AppComponent implements OnInit {
   title = 'counter-app';
   counter : number;
+  result : Array<number>;
+
   constructor(private store : Store<any>){}
 
   ngOnInit(){
     this.store.subscribe((data : any) => {
       this.counter = data['ctr'].counter
+      this.result = data['ctr'].result
     })
   }
 
@@ -33,5 +36,9 @@ export class AppComponent implements OnInit {
 
   onSubtractCounter(value : number){
     this.store.dispatch(new rootActions.onSubtractCounter(value))
+  }
+
+  onStoreResult(){
+    this.store.dispatch({type : rootActions.STORE_RESULT})
   }
 }

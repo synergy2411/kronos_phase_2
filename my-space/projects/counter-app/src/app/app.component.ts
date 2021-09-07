@@ -41,4 +41,8 @@ export class AppComponent implements OnInit {
   onStoreResult(){
     this.store.dispatch({type : rootActions.STORE_RESULT})
   }
+
+  onRemoveResult(idx : number){
+    this.store.dispatch(new rootActions.onRemoveResult(idx))
+  }
 }

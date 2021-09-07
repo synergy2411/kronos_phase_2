@@ -1,0 +1,4 @@
+.list-item:hover{
+  cursor: pointer;
+  font-size: bold;
+}

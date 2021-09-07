@@ -12,7 +12,9 @@
 <br>
 
 <ul>
-  <li *ngFor="let res of result">
+  <li *ngFor="let res of result; index as i"
+    class="list-item"
+    (dblclick)="onRemoveResult(i)">
     {{res}}
   </li>
 </ul>

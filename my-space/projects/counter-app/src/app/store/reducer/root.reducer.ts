@@ -40,6 +40,14 @@ function rootReducer(
         result : [...state.result, state.counter]
       }
     }
+    case rootActions.REMOVE_RESULT: {
+      const duplicateResult = [...state.result]
+      duplicateResult.splice(action.value, 1)
+      return {
+        ...state,
+        result : duplicateResult
+      }
+    }
     default:
       return state;
   }

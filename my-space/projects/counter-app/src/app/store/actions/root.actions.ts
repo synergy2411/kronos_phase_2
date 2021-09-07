@@ -5,6 +5,7 @@ export const DECREMENT = "DECREMENT"
 export const ADD_COUNTER = "ADD_COUNTER"
 export const SUBTRACT_COUNTER = "SUBTRACT_COUNTER"
 export const STORE_RESULT = "STORE_RESULT"
+export const REMOVE_RESULT = "REMOVE_RESULT"
 
 // Action Creator Class
 
@@ -24,4 +25,9 @@ export class onSubtractCounter implements Action{
   constructor(public value : number){}
 }
 
-export type counterAction = onAddCounter | onSubtractCounter
+export class onRemoveResult implements Action {
+  type = REMOVE_RESULT
+  constructor(public value : number){}
+}
+
+export type counterAction = onAddCounter | onSubtractCounter | onRemoveResult

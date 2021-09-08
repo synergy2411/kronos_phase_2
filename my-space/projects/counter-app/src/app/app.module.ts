@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import RootReducer from './store/reducer/root.reducer';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { RegisterComponent } from './register/register.component';
+import { ReactiveFormsModule } from "@angular/forms";
+import { UserComponent } from './user/user.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RegisterComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     StoreModule.forRoot({ctr : RootReducer }),
     StoreDevtoolsModule.instrument({logOnly : true}),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })

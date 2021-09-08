@@ -19,4 +19,16 @@
 
 https://ukg.zoom.us/j/99811054935?pwd=TzNIZXg1YzBmT2hNTVdDczlZTWhDQT09
 
+
+- ng add @angular/pwa
+- ng build -> dist/counter-app
 - npm install http-server -g
+
+---------------------
+- testing - Unit Testing - 
+    - Jasmine : testing framework for JS Apps
+    - Karma : test runner
+- library
+- app optimization techniques
+- deployment on Firebase cloud
+

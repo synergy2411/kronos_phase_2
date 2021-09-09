@@ -14,7 +14,7 @@ import { KronosLibModule } from 'kronos-lib';
 import { ParentComponent } from './strategies/parent/parent.component';
 import { ChildComponent } from './strategies/child/child.component';
 import { NgTrackDemoComponent } from './strategies/ng-track-demo/ng-track-demo.component'
-import { RouterModule } from '@angular/router';
+import { PreloadAllModules, RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
 import { EagerModule } from './modules/eager/eager.module';
 import { SharedModule } from './modules/shared/shared.module';
@@ -36,7 +36,9 @@ import { SharedModule } from './modules/shared/shared.module';
     KronosLibModule,
     EagerModule,
     SharedModule.forRoot(),
-    RouterModule.forRoot(APP_ROUTES),
+    RouterModule.forRoot(APP_ROUTES, {
+      preloadingStrategy : PreloadAllModules
+    }),
     StoreModule.forRoot({ctr : RootReducer }),
     StoreDevtoolsModule.instrument({logOnly : true}),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })

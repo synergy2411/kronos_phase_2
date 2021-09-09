@@ -14,6 +14,9 @@ import { KronosLibModule } from 'kronos-lib';
 import { ParentComponent } from './strategies/parent/parent.component';
 import { ChildComponent } from './strategies/child/child.component';
 import { NgTrackDemoComponent } from './strategies/ng-track-demo/ng-track-demo.component'
+import { RouterModule } from '@angular/router';
+import { APP_ROUTES } from './app.routes';
+import { EagerModule } from './modules/eager/eager.module';
 
 
 @NgModule({
@@ -30,6 +33,8 @@ import { NgTrackDemoComponent } from './strategies/ng-track-demo/ng-track-demo.c
     HttpClientModule,
     ReactiveFormsModule,
     KronosLibModule,
+    EagerModule,
+    RouterModule.forRoot(APP_ROUTES),
     StoreModule.forRoot({ctr : RootReducer }),
     StoreDevtoolsModule.instrument({logOnly : true}),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChildComponent } from './child.component';
+import { IAmLazyComponent } from './i-am-lazy.component';
 
-xdescribe('ChildComponent', () => {
-  let component: ChildComponent;
-  let fixture: ComponentFixture<ChildComponent>;
+describe('IAmLazyComponent', () => {
+  let component: IAmLazyComponent;
+  let fixture: ComponentFixture<IAmLazyComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChildComponent ]
+      declarations: [ IAmLazyComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChildComponent);
+    fixture = TestBed.createComponent(IAmLazyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

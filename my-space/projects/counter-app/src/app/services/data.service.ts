@@ -7,7 +7,7 @@ export class DataService{
 
   user = { name : "Foo" }
 
-  // constructor(private http:  HttpClient){}
+  constructor(private http:  HttpClient){}
 
   getUserName(){
     return this.user.name;
@@ -30,7 +30,7 @@ export class DataService{
   }
 
   getApiData(){
-    // return this.http.get("https://reqres.in/api/users?page=2")
+     return this.http.get("https://reqres.in/api/users")
   }
 
 }

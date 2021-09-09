@@ -47,3 +47,16 @@ https://ukg.zoom.us/j/99811054935?pwd=TzNIZXg1YzBmT2hNTVdDczlZTWhDQT09
 - deployment on Firebase cloud
 
 - ng test --code-coverage
+
+# Data Storage 
+- Angular Services - Singleton - not visible to UI
+- Redux Store - STATE
+- Web Storage - localStorage || SessionStorage
+
+
+
+
+# Service with Modules
+
+- Service registered with Eagerly loaded modules will have application-wide singleton instance
+- Service registered with Lazily loaded modules create a separate DI tree

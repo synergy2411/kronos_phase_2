@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChildComponent } from './child.component';
+import { IAmEagerComponent } from './i-am-eager.component';
 
-xdescribe('ChildComponent', () => {
-  let component: ChildComponent;
-  let fixture: ComponentFixture<ChildComponent>;
+describe('IAmEagerComponent', () => {
+  let component: IAmEagerComponent;
+  let fixture: ComponentFixture<IAmEagerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChildComponent ]
+      declarations: [ IAmEagerComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChildComponent);
+    fixture = TestBed.createComponent(IAmEagerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

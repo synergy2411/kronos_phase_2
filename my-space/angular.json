@@ -27,7 +27,8 @@
             "styles": [
               "projects/counter-app/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "webWorkerTsConfig": "projects/counter-app/tsconfig.worker.json"
           },
           "configurations": {
             "production": {
@@ -103,7 +104,8 @@
             "tsConfig": [
               "projects/counter-app/tsconfig.app.json",
               "projects/counter-app/tsconfig.spec.json",
-              "projects/counter-app/e2e/tsconfig.json"
+              "projects/counter-app/e2e/tsconfig.json",
+              "projects/counter-app/tsconfig.worker.json"
             ],
             "exclude": [
               "**/node_modules/**"

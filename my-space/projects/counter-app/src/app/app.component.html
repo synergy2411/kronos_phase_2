@@ -6,12 +6,21 @@
   <li>
     <a routerLink="lazy">Lazy</a>
   </li>
+
 </ul>
 
 <hr>
 
 <router-outlet></router-outlet>
 
+<button (click)="onWorkerExecute()">Run Worker</button>
+<hr>
+
+<button (click)="loadDynamicComponent()">Load Comp</button>
+
+
+
+<ng-template appPlaceholder></ng-template>
 
 <!-- <app-ng-track-demo></app-ng-track-demo> -->
 

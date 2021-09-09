@@ -18,6 +18,7 @@ import { PreloadAllModules, RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
 import { EagerModule } from './modules/eager/eager.module';
 import { SharedModule } from './modules/shared/shared.module';
+import { PlaceholderDirective } from './directives/placeholder.directive';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { SharedModule } from './modules/shared/shared.module';
     UserComponent,
     ParentComponent,
     ChildComponent,
-    NgTrackDemoComponent
+    NgTrackDemoComponent,
+    PlaceholderDirective
   ],
   imports: [
     BrowserModule,

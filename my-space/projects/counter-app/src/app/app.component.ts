@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentFactoryResolver, OnInit, ViewChild } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { PlaceholderDirective } from './directives/placeholder.directive';
+import { RegisterComponent } from './register/register.component';
 import * as rootActions from './store/actions/root.actions';
 
 @Component({
@@ -12,7 +14,19 @@ export class AppComponent implements OnInit {
   counter : number;
   result : Array<number>;
 
-  constructor(private store : Store<any>){}
+  @ViewChild(PlaceholderDirective, {static : false}) registerCmpHost : any;
+
+  constructor(
+    private store : Store<any>,
+    private crFactory : ComponentFactoryResolver
+    ){}
+
+    loadDynamicComponent(){
+      const registerCmpFactory = this.crFactory.resolveComponentFactory(RegisterComponent);
+      const vcRefHost = this.registerCmpHost.vcRef;
+      vcRefHost.clear()
+      vcRefHost.createComponent(registerCmpFactory)
+    }
 
   ngOnInit(){
     this.store.subscribe((data : any) => {
@@ -45,4 +59,19 @@ export class AppComponent implements OnInit {
   onRemoveResult(idx : number){
     this.store.dispatch(new rootActions.onRemoveResult(idx))
   }
+
+  onWorkerExecute(){
+  }
 }
+
+// if (typeof Worker !== 'undefined') {
+//   // Create a new
+//   const worker = new Worker(new URL('./app.worker'));
+//   worker.onmessage = ({ data }) => {
+//     console.log(`page got message: ${data}`);
+//   };
+//   worker.postMessage('hello');
+// } else {
+//   // Web workers are not supported in this environment.
+//   // You should add a fallback so that your program still executes correctly.
+// }

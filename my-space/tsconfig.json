@@ -19,6 +19,10 @@
       "the-demo-lib": [
         "dist/the-demo-lib/the-demo-lib",
         "dist/the-demo-lib"
+      ],
+      "kronos-lib": [
+        "dist/kronos-lib/kronos-lib",
+        "dist/kronos-lib"
       ]
     }
   }

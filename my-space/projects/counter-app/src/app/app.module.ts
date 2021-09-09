@@ -9,16 +9,27 @@ import { environment } from '../environments/environment';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from "@angular/forms";
 import { UserComponent } from './user/user.component'
+import { HttpClientModule } from '@angular/common/http';
+import { KronosLibModule } from 'kronos-lib';
+import { ParentComponent } from './strategies/parent/parent.component';
+import { ChildComponent } from './strategies/child/child.component';
+import { NgTrackDemoComponent } from './strategies/ng-track-demo/ng-track-demo.component'
+
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    UserComponent
+    UserComponent,
+    ParentComponent,
+    ChildComponent,
+    NgTrackDemoComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     ReactiveFormsModule,
+    KronosLibModule,
     StoreModule.forRoot({ctr : RootReducer }),
     StoreDevtoolsModule.instrument({logOnly : true}),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })

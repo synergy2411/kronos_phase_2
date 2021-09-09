@@ -163,6 +163,46 @@
           }
         }
       }
+    },
+    "kronos-lib": {
+      "projectType": "library",
+      "root": "projects/kronos-lib",
+      "sourceRoot": "projects/kronos-lib/src",
+      "prefix": "kl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/kronos-lib/tsconfig.lib.json",
+            "project": "projects/kronos-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/kronos-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/kronos-lib/src/test.ts",
+            "tsConfig": "projects/kronos-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/kronos-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/kronos-lib/tsconfig.lib.json",
+              "projects/kronos-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "counter-app"
 }

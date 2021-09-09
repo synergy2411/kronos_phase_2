@@ -1,0 +1,9 @@
+<p>ng-track-demo works!</p>
+
+<button (click)="onAddItem()" >Add Item</button>
+
+<ul>
+  <li *ngFor="let todo of todoCollection; trackBy : trackByLabel">
+    {{ todo.label }}
+  </li>
+</ul>

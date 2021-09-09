@@ -29,6 +29,21 @@ https://ukg.zoom.us/j/99811054935?pwd=TzNIZXg1YzBmT2hNTVdDczlZTWhDQT09
     - Jasmine : testing framework for JS Apps
     - Karma : test runner
 - library
+    - ng generate library kronos-lib --prefix=kl
+    - ng build kronos-lib
+    - import in Angular App Module
+
+
+
 - app optimization techniques
+    Change Detection Strategies :
+    - Default
+    - onPush
+
+    Parent -> Child
+
+
+
 - deployment on Firebase cloud
 
+- ng test --code-coverage

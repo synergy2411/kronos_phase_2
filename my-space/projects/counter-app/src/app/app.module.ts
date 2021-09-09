@@ -17,6 +17,7 @@ import { NgTrackDemoComponent } from './strategies/ng-track-demo/ng-track-demo.c
 import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
 import { EagerModule } from './modules/eager/eager.module';
+import { SharedModule } from './modules/shared/shared.module';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { EagerModule } from './modules/eager/eager.module';
     ReactiveFormsModule,
     KronosLibModule,
     EagerModule,
+    SharedModule.forRoot(),
     RouterModule.forRoot(APP_ROUTES),
     StoreModule.forRoot({ctr : RootReducer }),
     StoreDevtoolsModule.instrument({logOnly : true}),

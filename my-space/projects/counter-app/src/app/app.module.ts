@@ -24,10 +24,10 @@ import { PlaceholderDirective } from './directives/placeholder.directive';
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent,
     UserComponent,
     ParentComponent,
     ChildComponent,
+    RegisterComponent,
     NgTrackDemoComponent,
     PlaceholderDirective
   ],
@@ -46,6 +46,7 @@ import { PlaceholderDirective } from './directives/placeholder.directive';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  // entryComponents : [RegisterComponent]
 })
 export class AppModule { }

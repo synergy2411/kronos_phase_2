@@ -53,10 +53,33 @@ https://ukg.zoom.us/j/99811054935?pwd=TzNIZXg1YzBmT2hNTVdDczlZTWhDQT09
 - Redux Store - STATE
 - Web Storage - localStorage || SessionStorage
 
-
+# Deployment Steps - Firebase
+- ng build --prod
+- npm install -g firebase-tools
+- firebase login
+- firebase init
+- firebase deploy
 
 
 # Service with Modules
 
 - Service registered with Eagerly loaded modules will have application-wide singleton instance
 - Service registered with Lazily loaded modules create a separate DI tree
+
+- Shared Modules with ModuleWithProviders
+
+
+
+# Change Detection
+ - Default
+ - onPush => mutable changes
+
+ - Any event
+ - XHR Call
+ - Timer
+ - Activity trigger by user 
+
+
+
+
+ synergy2411@outlook.com
